@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+/* Track */
+::-webkit-scrollbar {
+  width: 1px; /* Adjust the width as needed */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0E0135; /* Change the color of the scrollbar handle */
+  border-radius: 5px; /* Adjust the border radius as needed */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0E0135;
+  opacity: .4; /* Change the color of the scrollbar handle on hover */
+}
+
+
+/* Track background */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Change the color of the scrollbar track */
+  width: 1px;
+}
+.sidebar li a {
+  @apply px-2 py-4 w-full flex items-center gap-3 hover:bg-brand/10  transition-colors ease-in-out duration-200 cursor-pointer text-[#201950] rounded-[4px];
+}
+.sidebar li button {
+  @apply px-2 py-4 w-full flex items-center gap-3  transition-colors ease-in-out duration-200 cursor-pointer text-[#201950] rounded-[4px];
+}
+.sidebar-btn{
+    @apply px-2 py-4 w-full flex items-center gap-3 hover:!text-white transition-colors ease-in-out duration-200 cursor-pointer !text-[#201950] rounded-[4px];
+
+}
+.sidebar li .router-link-active {
+  @apply bg-[#fff]  text-[#201950] font-medium;
+}
+
+.sidebar li .active {
+  @apply  bg-brand/10 text-[#201950] font-medium;
+}
+
+.sidebar li .sublink-active {
+  @apply bg-[#fff] text-[#201950] font-medium;
+}
+
+/*  */
+.inboxCard li a {
+  @apply px-2 py-4 w-full flex items-center gap-3   transition-colors ease-in-out duration-200 cursor-pointer text-[#201950] rounded-[4px];
+}
+.inboxCard li button {
+  @apply px-2 py-2 w-full flex items-center gap-3 hover:bg-brand/10 transition-colors ease-in-out duration-200 cursor-pointer text-[#201950] ;
+}
+.inboxCard-btn{
+    @apply px-2 py-4 w-full flex items-center gap-3 hover:!text-white transition-colors ease-in-out duration-200 cursor-pointer !text-[#201950] rounded-[4px];
+
+}
+.inboxCard li .router-link-active {
+  @apply bg-[#fff]  text-[#201950] font-medium;
+}
+
+.inboxCard li .active {
+  @apply bg-[#fff]  text-[#201950] font-medium;
+}
+
+.inboxCard li .sublink-active {
+  @apply bg-[#fff] text-[#201950] font-medium;
+}
+.brand-gradient {
+    background: radial-gradient(51.77% 139.58% at 49.48% 56.29%, #12141d 0, #12141d 13%, #12141d 35%, #12141d 55%, #12141d 74%, #000006 89%, #000);
+    background-blend-mode: screen;
+}
