@@ -1,40 +1,79 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Aleomail (ZKMail)
 
-## Getting Started
+## Overview
+Aleomail (ZKMail) is a blockchain-based email service that leverages Zero-Knowledge Proofs (ZKPs) and cryptographic techniques to provide secure and private communication between users. Built on the Aleo blockchain, ZKMail ensures end-to-end encryption, sender/receiver anonymity, and immutable mail records while keeping email contents confidential.
 
-First, run the development server:
+## Features
+- **Decentralized Email System** – No central authority, fully on-chain.
+- **End-to-End Encryption** – Emails are encrypted using asymmetric cryptography.
+- **Zero-Knowledge Proofs** – Verifies transactions without exposing message content.
+- **Secure Authentication** – Uses blockchain identities and Aleo wallet integration.
+- **Spam & Phishing Protection** – Smart contract-based filtering and reputation scoring.
+- **Decentralized Storage** – Encrypted content stored via IPFS/Arweave, metadata on-chain.
+- **Real-Time Notifications** – Alerts for incoming messages.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tech Stack
+- **Blockchain:** Aleo (Zero-Knowledge Proofs support)
+- **Cryptography:** ZK-SNARKs, ECC, asymmetric encryption
+- **Smart Contracts:** Aleo programming model
+- **Storage:** IPFS/Pinata (off-chain), Aleo blockchain (on-chain metadata)
+- **Frontend:** React/Next.js
+- **Backend:** Aleo-based smart contract execution
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
+### Prerequisites
+- Node.js (v16+ recommended)
+- Aleo Wallet
+- Aleo Development Environment
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Steps
+1. Clone the repository:
+   ```sh
+   git clone [https://github.com/your-repo/zkmail.git](https://github.com/Minimask-lap/aleomail)
+   cd aleomail
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Configure environment variables:
+   ```sh
+   cp .env.example .env
+   ```
+   Edit `.env.sample` with the required blockchain and storage configurations.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+4. Start the development server:
+   ```sh
+   npm run dev
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Usage
+1. **Register an account** using Aleo wallet.
+2. **Send a mail** by encrypting the content with the recipient’s public key.
+3. **Receive mail** by decrypting messages using your private key.
+4. **Verify email transactions** using ZK-SNARKs to ensure privacy.
 
-## Learn More
+## Roadmap
+- [ ] Implement inbox filtering with smart contract-based reputation scoring.
+- [ ] Enable multi-chain interoperability with Ethereum and Solana identities.
+- [ ] Develop a mobile-friendly UI for better accessibility.
+- [ ] Introduce a DAO-based governance model.
 
-To learn more about Next.js, take a look at the following resources:
+## Contributing
+Contributions are welcome! To get started:
+1. Fork the repo
+2. Create a new branch: `git checkout -b feature-branch`
+3. Make your changes and commit: `git commit -m "Added new feature"`
+4. Push the branch: `git push origin feature-branch`
+5. Open a pull request
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Contact
+For any questions, reach out via:
+- Twitter: [@aleomail](https://x.com/aleomail)
+- Discord: Join our community [here](https://discord.gg/aSEG7Dru)
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
